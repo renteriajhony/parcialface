@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   constructor(public service:AlertasService) {}
   ngOnInit(): void {
     this.service.getPublications().subscribe( _data => {
+      console.log("Data service", _data);
       this.data = _data;
     });
   }

@@ -1,6 +1,8 @@
 <div class="content">
   Publicaciones
-
+  <div class="spinner-border text-primary"  *ngIf="!data" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
   <div class="publication" *ngFor="let item of data; let i = index">
     <div class="card" style="width: 18rem">
       <img src="{{ item.recursos }}" class="card-img-top" alt="..." *ngIf="item.recursos" />
